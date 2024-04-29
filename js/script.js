@@ -1,12 +1,20 @@
 console.log(Vue);
+
 const {createApp} = Vue;
 
-createApp ({
+createApp({
     data() {
-        return {
+        return{
             mailArray: []
         }
-        
+    },
+    created() {
+        generateEmails();
+    },
+    methods: {
+        generateEmails: function() {
+            
+        }
 
     }
-}).mount("#app")
+})
