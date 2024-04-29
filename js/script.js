@@ -9,12 +9,15 @@ createApp({
         }
     },
     created() {
-        generateEmails();
+        this.generateEmails();
     },
     methods: {
         generateEmails: function() {
-            
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail').then((response) => {
+                const mail = response.data.response
+                console.log(mail);
+            });
         }
 
     }
-})
+}).mount('#app')
