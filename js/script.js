@@ -19,9 +19,11 @@ createApp({
                     console.log(mail);
                     this.mailArray.push(mail)
                 });
-                
             }
         }
+                
+                
+                
 
     }
 }).mount('#app')
